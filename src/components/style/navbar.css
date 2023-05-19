@@ -1,0 +1,89 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    height: 100vh;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    width: 20%;  
+    
+    text-align: left;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.2em;
+    
+    color: var(--black);
+}
+
+nav button {
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.closed-navbar button {
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.closed-navbar {
+    height: 100vh;
+}
+
+/* .navbar-menu {
+    text-align: left;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.2em;
+    
+    color: var(--black);
+} */
+
+/* .navbar li {
+    padding: 45px 0px;
+} */
+
+.nav-link:hover {
+    color: var(--pink);
+    transition: all 0.2s ease;
+}
+
+.nav-link.active {
+    color: var(--pink);
+}
+
+/* Smallest device - landscape phones */
+@media (min-width: 100px) and (max-width: 768px) {
+    .navbar {
+        width: 50%;
+        height: 100vh;
+    }
+    .navbar-menu {
+        /* flex-basis: 80%; */
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    /* .navbar li {
+        padding: 21px 0px;
+    } */
+}
+
+/* From tablet to desktop */
+@media (min-width: 768px) and (max-width: 900px) {
+    .navbar {
+        width: 30%;
+        /* height: 100vh; */
+    }
+
+    /* .navbar li {
+        padding: 21px 0px;
+    } */
+}

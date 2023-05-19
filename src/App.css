@@ -1,0 +1,11 @@
+body {
+  /* background-image: url("../background.png"); */
+  background: linear-gradient(0deg, rgba(232, 226, 218, 0.45), rgba(232, 226, 218, 0.45)), radial-gradient(25.96% 32.81% at 67.6% 41.31%, #EC8FBE 0.01%, #EC8FBE 0.02%, rgba(236, 143, 190, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh; */
+}
