@@ -8,7 +8,7 @@ const Homepage = () => {
     return (
         <div id='homepage'>
             <div className='title'>
-                <h1>Louise-Amélie</h1>
+                <h1>Louise-Amélie Maréchal</h1>
             </div>
             <div className='menu'>
                 <Link to="/cv" className='see-through-button'>Curriculum Vitae</Link>
