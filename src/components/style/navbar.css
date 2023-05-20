@@ -1,6 +1,6 @@
 .navbar {
     grid-area: nav;
-    position: absolute;
+    position: fixed;
 
 
     display: flex;
@@ -24,21 +24,19 @@
     background-color: #F3F0EC;
 
     color: var(--black);
-}
 
-/* nav {
-    grid-area: nav;
-} */
+    /* overflow: auto; */
+}
 
 .opened-nav {
     z-index: 1;
-    position: absolute;
+    position: fixed;
     margin-left: 5%;
     margin-top: 5%;
 }
 
 .closed-navbar button {
-    position: absolute;
+    position: fixed;
     margin-left: 5%;
     margin-top: 5%;
 }
