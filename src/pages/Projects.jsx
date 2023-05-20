@@ -4,7 +4,7 @@ const Projects = () => {
 
     return (
         <>
-            <Navbar/>
+            <h1>Projets</h1>
         </>
     )
 }

@@ -1,11 +1,55 @@
 body {
   /* background-image: url("../background.png"); */
-  background: linear-gradient(0deg, rgba(232, 226, 218, 0.45), rgba(232, 226, 218, 0.45)), radial-gradient(25.96% 32.81% at 67.6% 41.31%, #EC8FBE 0.01%, #EC8FBE 0.02%, rgba(236, 143, 190, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 100vh; */
+  margin: 0px;
+  /* min-height: 100vh; */
 }
+
+/* #root {
+  
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  /* height: 100vh; */
+/* } */
+/* 
+.page-content {
+  height: 100vh;
+} */
+
+.app {
+  background: linear-gradient(0deg, rgba(232, 226, 218, 0.45), rgba(232, 226, 218, 0.45)), radial-gradient(25.96% 32.81% at 67.6% 41.31%, #EC8FBE 0.01%, #EC8FBE 0.02%, rgba(236, 143, 190, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "nav page-content"
+    "nav footer";
+  min-height: 100vh;
+}
+
+.main-content {
+  grid-area: page-content;
+  min-height: 90vh;
+  /* padding-bottom: 50px; */
+}
+
+.send-back {
+  z-index: -1;
+}
+/* 
+@media (min-width: 100px) and (max-width: 768px) {
+  #root {
+    grid-template-columns: 50% 1fr;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  #root {
+    grid-template-columns: 30% 1fr;
+  }
+
+} */

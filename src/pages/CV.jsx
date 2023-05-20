@@ -1,11 +1,8 @@
-import Navbar from "../components/navbar.jsx";
-
 const CV = () => {
 
     return(
-        <>
-            <Navbar/>
-        </>
+        <div className="cv">
+        </div>
     )
 }
 

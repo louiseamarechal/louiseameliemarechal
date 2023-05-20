@@ -1,11 +1,15 @@
 .navbar {
+    grid-area: nav;
+    position: absolute;
+
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
 
-    height: 100vh;
+    min-height: 100vh;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
     width: 20%;  
@@ -17,23 +21,31 @@
     line-height: 30px;
     letter-spacing: 0.2em;
     
+    background-color: #F3F0EC;
+
     color: var(--black);
 }
 
-nav button {
+/* nav {
+    grid-area: nav;
+} */
+
+.opened-nav {
+    z-index: 1;
     position: absolute;
     margin-left: 5%;
     margin-top: 5%;
 }
 
 .closed-navbar button {
+    position: absolute;
     margin-left: 5%;
     margin-top: 5%;
 }
 
-.closed-navbar {
+/* .closed-navbar {
     height: 100vh;
-}
+} */
 
 /* .navbar-menu {
     text-align: left;
@@ -80,10 +92,7 @@ nav button {
 @media (min-width: 768px) and (max-width: 900px) {
     .navbar {
         width: 30%;
-        /* height: 100vh; */
+        height: 100vh;
     }
 
-    /* .navbar li {
-        padding: 21px 0px;
-    } */
 }

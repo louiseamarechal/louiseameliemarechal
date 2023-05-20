@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Homepage = () => {
 
     return (
-        <div id='homepage'>
+        <div className='homepage'>
             <div className='title'>
                 <h1>Louise-Amélie Maréchal</h1>
             </div>
