@@ -17,7 +17,7 @@ const CV = () => {
     ]
 
     return(
-        <div className='container-cv'>
+        <>
             <div className="header-cv">
                 <ul>
                     <li>Formation</li>
@@ -80,7 +80,9 @@ const CV = () => {
                     </ul>
                 </div>
             </div>
-        </div>
+        </>
+        // <div className='container-cv'>
+        // </div>
     )
 }
 
