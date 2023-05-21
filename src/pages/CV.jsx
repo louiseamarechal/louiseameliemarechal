@@ -1,6 +1,17 @@
 import './style/CV.css'
+import ProgressBar from '../components/progress-bar.jsx'
+import Timeline from '../components/timeline.jsx'
 
 const CV = () => {
+
+    const skillsData = [
+        { completed: 70, skill: "C" },
+        { completed: 70, skill: "C++" },
+        { completed: 40, skill: "JS" },
+        { completed: 40, skill: "React" },
+        { completed: 40, skill: "NodeJs" },
+        { completed: 40, skill: "Ruby on Rails" },
+    ]
 
     return(
         <>
@@ -8,13 +19,13 @@ const CV = () => {
             <div className="header-cv">
                 <ul>
                     <li>Formation</li>
-                    <li>experience</li>
+                    <li>Experience</li>
                     <li>Compétences</li>
                     <li>Soft Skills</li>
                 </ul>
             </div>
             <div className="formation">
-                <p>TBC</p>
+                <Timeline/>
             </div>
             <div className="experience">
                 <div className='experience-card'>
@@ -52,7 +63,11 @@ const CV = () => {
                     <p>Organisation des 50 ans du Salon International de la Lingerie au Château de Versailles: création d’un emploi du temps pour la soirée, prise de contact avec les invités (Lise Charmel, Chantal Thomass, Chantelle), relance téléphonique, gérer les éventuels litiges...</p>
                 </div>
             </div>
-            <div className="competences"></div>
+            <div className="competences">
+                {skillsData.map((item, index) => (
+                    <ProgressBar key={index} completed={item.completed} skill={item.skill}/>
+                ))}
+            </div>
             <div className="soft-skills"></div>
         </div>
         </>

@@ -1,5 +1,9 @@
 :root {
 
     --black: rgba(29, 29, 27, 0.8);
+    /* --pink: #F18701; */
     --pink: #EC8FBE;
+    --white: #F5F5F5;
+    --grey: #D8D4D5;
+    --pale-pink: #F2E3E6;
 }

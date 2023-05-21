@@ -1,23 +1,6 @@
 body {
-  /* background-image: url("../background.png"); */
   margin: 0px;
-  /* min-height: 100vh; */
 }
-
-/* #root {
-  
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: 1fr auto;
-  /* flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-  /* height: 100vh; */
-/* } */
-/* 
-.page-content {
-  height: 100vh;
-} */
 
 .app {
   background: linear-gradient(0deg, rgba(232, 226, 218, 0.45), rgba(232, 226, 218, 0.45)), radial-gradient(25.96% 32.81% at 67.6% 41.31%, #EC8FBE 0.01%, #EC8FBE 0.02%, rgba(236, 143, 190, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
@@ -33,7 +16,6 @@ body {
 .main-content {
   grid-area: page-content;
   min-height: 90vh;
-  /* padding-bottom: 50px; */
 }
 
 .send-back {

@@ -8,6 +8,7 @@
 
 .header-cv {
     width: 100%;
+    color: var(--black);
 }
 
 .header-cv ul {
@@ -57,4 +58,15 @@
     line-height: 17px;
     letter-spacing: 0.15em;
     color: var(--black);
+}
+
+.competences {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 40px;
+}
+
+.formation {
+    width: 100%;
 }

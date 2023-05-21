@@ -1,0 +1,49 @@
+.timeline {
+    margin: 50px 60px;
+    height: 1px;
+    /* background-color: var(--grey); */
+    border: 1px dashed var(--grey);
+}
+
+.timeline-items {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+/* ::before creates a pseudo-element that is the first child of the selected element. 
+https://developer.mozilla.org/en-US/docs/Web/CSS/::before */
+.timeline-item::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    display: block;
+    border-radius: 100%;
+}
+
+.timeline-item p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 0px 10px;
+}
+
+.timeline-content {
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #ddd;
+	width: 100px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	text-align: center;
+}
