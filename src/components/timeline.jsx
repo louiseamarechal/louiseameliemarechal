@@ -5,20 +5,31 @@ const Timeline = (props) => {
 		<div className="timeline">
             <div className="timeline-items">
 				<div className="timeline-item">
-                    <p>2012</p>
-                    <div className="timeline-content">Step 1</div>
+                    <div className="timeline-content">
+                        <h3>2012</h3>
+                        <h2>Baccalauréat</h2>
+                    </div>
                 </div>
 				<div className="timeline-item">
-                    <p>2017</p>
-                    <div className="timeline-content">Step 2</div>
+                    <div className="timeline-content">
+                        <h3>2017</h3>
+                        <h2>ESCE</h2>
+                        <p>Master en Commerce International</p>
+                    </div>
                 </div>
 				<div className="timeline-item">
-                    <p>2017</p>
-                    <div className="timeline-content">Step 3</div>
+                    <div className="timeline-content">
+                        <h3>2021</h3>
+                        <h2>Le Wagon</h2>
+                        <p>Bootcamp en programmation web</p>
+                    </div>
                 </div>
 				<div className="timeline-item">
-                    <p>2021</p>
-                    <div className="timeline-content">Step 4</div>
+                    <div className="timeline-content">
+                        <h3>2023</h3>
+                        <h2>Ecole 42</h2>
+                        <p>Ecole de programmation</p>
+                    </div>
                 </div>
 			</div>
         </div>

@@ -9,9 +9,10 @@ export default function Navbar() {
     if (navbarState)
         return (
             <nav>
-                <button onClick={() => {setNavbarState(false)}} 
-                    className={"fa-solid fa-xmark fa-l opened-nav"} style={{color: "var(--black)"}}></button>
-                <ul className='navbar'>
+                {/* <button onClick={() => {setNavbarState(false)}} 
+                    className={"fa-solid fa-xmark fa-l opened-nav"} style={{color: "var(--black)"}}></button> */}
+                <ul className='navbar send-front'>
+                    <button onClick={() => {setNavbarState(false)}}>x</button>
                     <li>
                         <NavLink to="/" className="nav-link">Home</NavLink>
                     </li>
@@ -29,7 +30,7 @@ export default function Navbar() {
         )
     else
         return (
-            <div className='closed-navbar'>
+            <div className='closed-navbar send-front'>
                 <button onClick={() => {setNavbarState(true)}}
                     className={"fa-solid fa-bars closed-nav"} style={{color: "var(--black)"}}></button>
             </div>

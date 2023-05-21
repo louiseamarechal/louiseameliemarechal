@@ -1,21 +1,34 @@
-body {
+/* body {
   margin: 0px;
-}
+} */
 
 .app {
   background: linear-gradient(0deg, rgba(232, 226, 218, 0.45), rgba(232, 226, 218, 0.45)), radial-gradient(25.96% 32.81% at 67.6% 41.31%, #EC8FBE 0.01%, #EC8FBE 0.02%, rgba(236, 143, 190, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas:
+    "nav header"
     "nav page-content"
     "nav footer";
   min-height: 100vh;
+  font-family: 'Inter';
+}
+
+.header {
+  grid-area: header;
+  height: 10vh;
+  position: fixed;
 }
 
 .main-content {
   grid-area: page-content;
-  min-height: 90vh;
+  min-height: 80vh;
+  /* margin-top: 65px; */
+}
+
+.send-front {
+  z-index: 1;
 }
 
 .send-back {
