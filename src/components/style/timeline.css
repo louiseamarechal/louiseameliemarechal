@@ -81,10 +81,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/::before */
 }
 
 @media (max-width: 768px) {
-    .formation {
-        padding-left: 50px;
-    }
-
     .timeline{
         margin-top: 0;
         width: 160px;
