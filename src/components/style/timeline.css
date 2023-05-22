@@ -43,7 +43,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/::before */
 .timeline-content p {
     top: 30px;
 	width: 100px;
-	border-radius: 5px;
+	/* border-radius: 5px; */
 	text-align: center;
     font-weight: 400;
     font-size: 11px;
@@ -64,4 +64,42 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/::before */
     font-size: 15px;
     line-height: 30px;
     letter-spacing: 0.2em;
+}
+
+@media (max-width: 990px) {
+    .timeline-content p, h3 {
+        font-size: 8px;
+        line-height: 8px;
+    }
+    
+    .timeline-content h2 {
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: 500;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .timeline{
+        margin-top: 0;
+        width: 160px;
+        height: 260px;
+        border-top-left-radius: 110px;
+        border-top-right-radius: 110px;
+        border-bottom: 0;
+        transform: rotate(90deg);
+    }
+    
+    .timeline-items {
+        width: inherit;
+        height: inherit;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        transform: rotate(-90deg);
+    }
 }
