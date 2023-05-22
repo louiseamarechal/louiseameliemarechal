@@ -7,9 +7,7 @@
 }
 
 .timeline-items {
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-top: -12px;
+    margin-top: -8px;
     display: flex;
     justify-content: space-between;
 }
@@ -24,16 +22,18 @@
 
 /* ::before creates a pseudo-element that is the first child of the selected element. 
 https://developer.mozilla.org/en-US/docs/Web/CSS/::before */
-.timeline-item::before {
+/* .timeline-item::before {
     content: '';
     width: 20px;
     height: 20px;
     background-color: var(--pale-pink);
     display: block;
     border-radius: 100%;
-}
+} */
 
 .timeline-content {
+    color: var(--black);
+    font-family: 'Inter';
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,6 +81,10 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/::before */
 }
 
 @media (max-width: 768px) {
+    .formation {
+        padding-left: 50px;
+    }
+
     .timeline{
         margin-top: 0;
         width: 160px;
@@ -101,5 +105,21 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/::before */
         align-items: center;
         margin: 0;
         transform: rotate(-90deg);
+    }
+
+    .timeline-content p {
+        display: none;
+    }
+
+    .item2 {
+        padding-top: 6px;
+    }
+
+    .item3 {
+        padding-top: 57px;
+    }
+
+    .timeline-item {
+        width: 100px;
     }
 }
