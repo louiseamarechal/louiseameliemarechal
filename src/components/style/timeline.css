@@ -80,8 +80,9 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/::before */
     
 }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .timeline{
+        /* transition: opacity 0.5s ease-out; */
         margin-top: 0;
         width: 160px;
         height: 260px;
