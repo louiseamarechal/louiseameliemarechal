@@ -42,7 +42,7 @@
     flex-wrap: wrap;
 }
 
-.header-cv li {
+.header-cv a {
     font-style: italic;
     font-weight: 500;
     font-size: 15px;
@@ -53,18 +53,32 @@
     letter-spacing: 0.1em;
 }
 
-.formation {
+.header-cv .active {
+    font-style: normal;
+    text-decoration-line: underline;
+}
+
+#formation {
     /* padding-left: 5%; */
     display: flex;
     align-items: center;
     justify-content: center;
     /* padding-top: 8%;
     padding-bottom: 5%; */
-    height: 300px;
+    /* height: 300px; */
+    height: 90vh;
     width: 100%;
 }
 
-.experience h2 {
+#experience {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#experience h2 {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
@@ -72,7 +86,7 @@
     color: var(--black);
 }
 
-.experience h3 {
+#experience h3 {
     padding-bottom: 15px;
     font-style: italic;
     font-weight: 300;
@@ -82,7 +96,7 @@
     color: var(--black);
 }
 
-.experience li, p {
+#experience li, p {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
@@ -98,16 +112,21 @@
     /* width: inherit; */
 }
 
-.competences {
-    margin: 30px 0px;
-    height: 150px;
+#competences {
+    margin-top: 178px;
+    height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-rows: 10% 10% 10%;
     grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
     grid-gap: 0px 40px;
 }
 
-.soft-skills {
+#soft-skills {
+    height: 100vh;
     margin: 30px 0px;
     font-weight: 400;
     font-size: 14px;
@@ -128,7 +147,7 @@
         height: 10vh;
     }
 
-    .competences {
+    #competences {
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
@@ -138,7 +157,7 @@
     /* .container-cv {
         grid-template-columns: 85%;
     } */
-    .header-cv li, .experience li, p, .soft-skills {
+    .header-cv li, .experience li, p, #soft-skills {
         font-size: 10px;
     }
     
@@ -147,27 +166,28 @@
         padding-left: 33px;
     }
     
-    .competences {
+    #competences {
+        margin-top: 0px;
         grid-template-rows: repeat(9, 1fr);
         grid-template-columns: 1fr;
-        grid-gap: 5px 0px;
-        height: 200px;
+        grid-gap: 0px 0px;
+        height: 90vh;
     }
     
-    .experience h2 {
+    #experience h2 {
         font-size: 15px;
     }
     
-    .experience h3 {
+    #experience h3 {
         font-size: 9px;
     }
 }
 
 @media (max-width: 500px) {
-    .formation {
+    #formation {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 350px;
+        /* height: 100vh; */
     }
 }
