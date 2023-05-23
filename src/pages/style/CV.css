@@ -146,6 +146,7 @@
     
     .header-cv {
         height: 10vh;
+
     }
 
     #soft-skills, #competences, #experience, #formation {
@@ -170,7 +171,7 @@
     /* .container-cv {
         grid-template-columns: 85%;
     } */
-    .header-cv li, .experience li, p, #soft-skills {
+    .header-cv button, .experience li, p, #soft-skills {
         font-size: 10px;
     }
     
