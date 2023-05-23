@@ -2,7 +2,9 @@ import './style/CV.css'
 import ProgressBar from '../components/progress-bar.jsx'
 import Timeline from '../components/timeline.jsx'
 import Reveal from '../components/reveal'
-import { useState, useRef } from 'react'
+import ScrollIntoView from 'react-scroll-into-view'
+import { NavLink } from 'react-router-dom';
+import SoftSkills from '../components/soft-skill'
 
 const CV = () => {
 
@@ -18,22 +20,29 @@ const CV = () => {
         { completed: 20, skill: "Mysql"},
     ]
 
-    const goToId = (e, id) => {
-        e.preventDefault() // do not follow the link
-        const targetElement = document.getElementById(`${id}`)
-        const {top, left} = targetElement.getBoundingClientRect() // get position on screen
-        console.log(top, left);
-        window.scrollTo(top, left)
-    }
+    const softSkills = [
+        { skillName: "Autonomie" },
+        { skillName: "Organisation" },
+        { skillName: "Sens de l'écoute" },
+        { skillName: "Travail en équipe" },
+    ]
 
     return(
         <>
             <div className="header-cv">
                 <ul>
-                    <a href='#formation' onClick={(e) => goToId(e, "formation")}>Formation</a>
-                    <a href='#experience' onClick={(e) => goToId(e, "experience")}>Experience</a>
-                    <a href='#competences' onClick={(e) => goToId(e, "competences")}>Compétences</a>
-                    <a href='#soft-skills' onClick={(e) => goToId(e, "soft-skills")}>Soft Skills</a>
+                    <ScrollIntoView selector='#formation'>
+                        <button>Formation</button>
+                    </ScrollIntoView>
+                    <ScrollIntoView selector='#experience'>
+                        <button>Experience</button>
+                    </ScrollIntoView>
+                    <ScrollIntoView selector='#competences'>
+                        <button>Compétences</button>
+                    </ScrollIntoView>
+                    <ScrollIntoView selector='#soft-skills'>
+                        <button>Soft Skills</button>
+                    </ScrollIntoView>
                 </ul>
             </div>
             <div className="cv">
@@ -95,12 +104,9 @@ const CV = () => {
                 </Reveal>
                 <Reveal>
                     <div id="soft-skills">
-                        <ul>
-                            <li><i className="fa-solid fa-check" style={{color: "var(--pale-pink)"}}></i> Autonomie</li>
-                            <li><i className="fa-solid fa-check" style={{color: "var(--pale-pink)"}}></i> Organisation</li>
-                            <li><i className="fa-solid fa-check" style={{color: "var(--pale-pink)"}}></i> Sens de l'écoute</li>
-                            <li><i className="fa-solid fa-check" style={{color: "var(--pale-pink)"}}></i> Travail en équipe</li>
-                        </ul>
+                        {softSkills.map((skill, index) => (
+                            <SoftSkills key={index} skillName={skill.skillName}/>
+                        ))}
                     </div>
                 </Reveal>
             </div>

@@ -28,7 +28,7 @@
 }
 
 .send-front {
-  z-index: 1 !important;
+  z-index: 100;
 }
 
 .send-back {

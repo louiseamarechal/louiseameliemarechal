@@ -7,7 +7,7 @@ import Contact from './pages/Contact.jsx'
 import './components/style/colors.css'
 import Footer from './components/footer.jsx'
 import Navbar from './components/navbar.jsx'
-import Reveal from './components/reveal.jsx'
+// import Reveal from './components/reveal.jsx'
 
 const App = () => {
   

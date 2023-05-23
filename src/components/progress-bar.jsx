@@ -17,7 +17,7 @@ const ProgressBar = (props) => {
       backgroundColor: "var(--pale-pink)",
       borderRadius: 'inherit',
       transition: 'width 1s ease-in-out',
-    //   opacity: 0.5
+    //   opacity: 0.
 
     }
   
