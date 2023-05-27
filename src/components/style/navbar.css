@@ -3,40 +3,42 @@
     grid-area: nav;
     position: fixed;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-
     min-height: 100vh;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
     width: 20%;  
     
+    background-color: var(--beige);
+}
+
+.navbar-links {
+    margin-top: 10vh;
+    min-height: 90vh;
+    display: flex;
+    margin-left: 25%;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
     text-align: left;
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 30px;
     letter-spacing: 0.2em;
-    
-    background-color: var(--beige);
-
     color: var(--black);
-
-    /* overflow: auto; */
 }
+
 
 .navbar button {
-    font-size: 25px;
-}
-
-.opened-nav {
-    z-index: 100;
+    z-index: 110;
     position: fixed;
-    margin-left: 5%;
-    margin-top: 5%;
+    height: 15vh;
+    display: flex;
+    width: 10%;
+    align-items: center;
+    justify-content: center;
 }
 
 .closed-navbar button {
@@ -47,28 +49,8 @@
     align-items: center;
     justify-content: center;
     width: 10%;
-    /* margin-left: 5%;
-    margin-top: 5%; */
+
 }
-
-/* .closed-navbar {
-    height: 100vh;
-} */
-
-/* .navbar-menu {
-    text-align: left;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 0.2em;
-    
-    color: var(--black);
-} */
-
-/* .navbar li {
-    padding: 45px 0px;
-} */
 
 .nav-link:hover {
     color: var(--pink);
@@ -83,21 +65,17 @@
 @media (min-width: 100px) and (max-width: 768px) {
     .navbar {
         width: 50%;
-        height: 100vh;
-    }
-    .navbar-menu {
-        /* flex-basis: 80%; */
-        font-weight: 400;
-        font-size: 18px;
+        min-height: 100vh;
+        font-size: 15px;
     }
 
     .closed-navbar button {
         height: 10vh;
     }
 
-    /* .navbar li {
-        padding: 21px 0px;
-    } */
+    .navbar button {
+        height: 10vh;
+    }
 }
 
 /* From tablet to desktop */
@@ -105,9 +83,13 @@
     .closed-navbar button {
         height: 10vh;
     }
+    
+    .navbar button {
+        height: 10vh;
+    }
 
     .navbar {
         width: 30%;
-        height: 100vh;
+        min-height: 100vh;
     }
 }

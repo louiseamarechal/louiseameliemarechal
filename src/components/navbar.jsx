@@ -8,23 +8,14 @@ export default function Navbar() {
     
     if (navbarState)
         return (
-            <nav>
-                {/* <button onClick={() => {setNavbarState(false)}} 
-                    className={"fa-solid fa-xmark fa-l opened-nav"} style={{color: "var(--black)"}}></button> */}
-                <ul className='navbar send-front'>
-                    <button onClick={() => {setNavbarState(false)}}>x</button>
-                    <li>
-                        <NavLink to="/" className="nav-link">Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/cv" className="nav-link">CV</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/projets" className="nav-link">Projets</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/contact" className="nav-link">Contact</NavLink>
-                    </li>
+            <nav className='navbar'>
+                <button onClick={() => {setNavbarState(false)}} 
+                    className={"fa-solid fa-xmark fa-l"} style={{color: "var(--black)"}}></button>
+                <ul className='navbar-links send-front'>
+                    <NavLink to="/" className="nav-link">Home</NavLink>
+                    <NavLink to="/cv" className="nav-link">CV</NavLink>
+                    <NavLink to="/projets" className="nav-link">Projets</NavLink>
+                    <NavLink to="/contact" className="nav-link">Contact</NavLink>
                 </ul>
             </nav>
         )

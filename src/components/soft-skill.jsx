@@ -8,6 +8,7 @@ const SoftSkills = (props) => {
         borderRadius: 100,
         backgroundColor: "var(--pale-pink)",
         margin: '0px 20px',
+        boxShadow: '0px 1px 3px var(--grey)'
     }
 
     const textStyle = {

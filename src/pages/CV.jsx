@@ -3,10 +3,27 @@ import ProgressBar from '../components/progress-bar.jsx'
 import Timeline from '../components/timeline.jsx'
 import Reveal from '../components/reveal'
 import ScrollIntoView from 'react-scroll-into-view'
-import { NavLink } from 'react-router-dom';
 import SoftSkills from '../components/soft-skill'
+import { useEffect, useState } from 'react'
 
 const CV = () => {
+
+    const [scroll, setScroll] = useState(50);
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            console.log(window.scrollY);
+            // console.log(scroll)
+            if (window.scrollY <= 100)
+                setScroll(50);
+            else if (window.scrollY >= 650 && window.scrollY < 1700)
+                setScroll(650);
+            else if (window.scrollY >= 1700 && window.scrollY < 2300)
+                setScroll(1700);
+            else if (window.scrollY >= 2300)
+                setScroll(2300);
+     });
+    }, []);
 
     const skillsData = [
         { completed: 70, skill: "C" },
@@ -32,16 +49,16 @@ const CV = () => {
             <div className="header-cv">
                 <ul>
                     <ScrollIntoView selector='#formation'>
-                        <button>Formation</button>
+                        <button className={scroll === 50 ? 'active-header' : 'none'}>Formation</button>
                     </ScrollIntoView>
                     <ScrollIntoView selector='#experience'>
-                        <button>Experience</button>
+                        <button className={scroll === 650 ? 'active-header' : 'none'}>Experience</button>
                     </ScrollIntoView>
                     <ScrollIntoView selector='#competences'>
-                        <button>Compétences</button>
+                        <button className={scroll === 1700 ? 'active-header' : 'none'}>Compétences</button>
                     </ScrollIntoView>
                     <ScrollIntoView selector='#soft-skills'>
-                        <button>Soft Skills</button>
+                        <button className={scroll === 2300 ? 'active-header' : 'none'}>Soft Skills</button>
                     </ScrollIntoView>
                 </ul>
             </div>
