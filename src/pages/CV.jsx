@@ -22,8 +22,8 @@ const CV = () => {
                 setScroll(600);
             else if (window.scrollY >= 1660 && window.scrollY < 2250)
                 setScroll(1660);
-            else if (window.scrollY >= 2300)
-                setScroll(2300);
+            else if (window.scrollY >= 2000)
+                setScroll(2000);
      });
     }, []);
 
@@ -60,7 +60,7 @@ const CV = () => {
                         <button className={scroll === 1660 ? 'active-header' : 'none'}>Compétences</button>
                     </ScrollIntoView>
                     <ScrollIntoView selector='#soft-skills'>
-                        <button className={scroll === 2300 ? 'active-header' : 'none'}>Soft Skills</button>
+                        <button className={scroll === 2000 ? 'active-header' : 'none'}>Soft Skills</button>
                     </ScrollIntoView>
                 </ul>
             </div>
