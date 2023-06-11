@@ -14,15 +14,13 @@ const CV = () => {
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            console.log(window.scrollY);
-            // console.log(scroll)
             if (window.scrollY <= 100)
                 setScroll(50);
-            else if (window.scrollY >= 600 && window.scrollY < 1660)
+            else if (window.scrollY >= 600 && window.scrollY < 1600)
                 setScroll(600);
-            else if (window.scrollY >= 1660 && window.scrollY < 2250)
-                setScroll(1660);
-            else if (window.scrollY >= 2000)
+            else if (window.scrollY >= 1600 && window.scrollY < 2200)
+                setScroll(1600);
+            else if (window.scrollY >= 2200)
                 setScroll(2000);
      });
     }, []);
@@ -30,10 +28,10 @@ const CV = () => {
     const skillsData = [
         { completed: 70, skill: "C" },
         { completed: 70, skill: "C++" },
-        { completed: 40, skill: "JS" },
-        { completed: 40, skill: "React" },
-        { completed: 40, skill: "NodeJs" },
-        { completed: 40, skill: "RoR" },
+        { completed: 35, skill: "NestJS" },
+        { completed: 35, skill: "React" },
+        { completed: 35, skill: "NodeJs" },
+        { completed: 35, skill: "RoR" },
         { completed: 60, skill: "Figma"},
         { completed: 80, skill: "Anglais"},
         { completed: 20, skill: "Mysql"},
@@ -57,7 +55,7 @@ const CV = () => {
                         <button className={scroll === 600 ? 'active-header' : 'none'}>Experience</button>
                     </ScrollIntoView>
                     <ScrollIntoView selector='#competences'>
-                        <button className={scroll === 1660 ? 'active-header' : 'none'}>Compétences</button>
+                        <button className={scroll === 1600 ? 'active-header' : 'none'}>Compétences</button>
                     </ScrollIntoView>
                     <ScrollIntoView selector='#soft-skills'>
                         <button className={scroll === 2000 ? 'active-header' : 'none'}>Soft Skills</button>

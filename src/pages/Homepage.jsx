@@ -17,7 +17,7 @@ const Homepage = () => {
                 </div>
                 <div className='menu'>
                     <Link to="/cv" className='see-through-button'>Curriculum Vitae</Link>
-                    <Link to="/projets" className='see-through-button m-5'>Projets</Link>
+                    {/* <Link to="/projets" className='see-through-button m-5'>Projets</Link> */}
                     <Link to="/contact" className='see-through-button'>Contact</Link>
                 </div>
             </div>
