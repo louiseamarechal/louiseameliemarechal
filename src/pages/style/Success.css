@@ -1,0 +1,28 @@
+.success {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    line-height: 68px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    
+    color: var(--black);
+    font-size: 30px;
+}
+
+/* From tablet to desktop */
+@media (min-width: 768px) and (max-width: 900px) {
+
+    .success h1 {
+        font-size: 20px;
+        line-height: 48px;
+    }
+}
+
+/* Smallest device - landscape phones */
+@media (min-width: 100px) and (max-width: 768px) {
+
+    .success h1 {
+        font-size: 15px;
+        line-height: 48px;
+    }
+}

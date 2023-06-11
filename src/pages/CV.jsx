@@ -5,10 +5,12 @@ import Reveal from '../components/reveal'
 import ScrollIntoView from 'react-scroll-into-view'
 import SoftSkills from '../components/soft-skill'
 import { useEffect, useState } from 'react'
+import useNavbar from '../hooks/useNavbar'
 
 const CV = () => {
 
     const [scroll, setScroll] = useState(50);
+    const  { navbarState } = useNavbar();
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -46,7 +48,7 @@ const CV = () => {
 
     return(
         <>
-            <div className="header-cv">
+            <div className={"header-cv " + (navbarState ? 'opened-nav-margin' : 'w-full')}>
                 <ul>
                     <ScrollIntoView selector='#formation'>
                         <button className={scroll === 50 ? 'active-header' : 'none'}>Formation</button>
@@ -62,7 +64,7 @@ const CV = () => {
                     </ScrollIntoView>
                 </ul>
             </div>
-            <div className="cv">
+            <div className={"cv " + (navbarState ? 'opened-nav-margin' : 'w-full')}>
                 <Reveal width={"100%"}>
                     <div id="formation">
                         <Timeline/>

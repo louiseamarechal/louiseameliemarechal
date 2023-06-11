@@ -7,6 +7,7 @@ import Contact from './pages/Contact.jsx'
 import './components/style/colors.css'
 import Footer from './components/footer.jsx'
 import Navbar from './components/navbar.jsx'
+import Success from './pages/Success'
 // import Reveal from './components/reveal.jsx'
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/cv" element={<CV />} />
             <Route path="/projets" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/success" element={<Success />} />
         </Routes>
       </div>
       <Footer/>

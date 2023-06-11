@@ -1,10 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import './style/navbar.css'
-import { useState } from 'react';
+// import { useState } from 'react';
+import useNavbar from '../hooks/useNavbar';
 
 export default function Navbar() {
     
-    const [navbarState, setNavbarState] = useState(false);
+    const { navbarState, setNavbarState } = useNavbar();
+    // const [navbarState, setNavbarState] = useState(false);
     
     if (navbarState)
         return (
@@ -12,10 +14,10 @@ export default function Navbar() {
                 <button onClick={() => {setNavbarState(false)}} 
                     className={"fa-solid fa-xmark fa-l"} style={{color: "var(--black)"}}></button>
                 <ul className='navbar-links send-front'>
-                    <NavLink to="/" className="nav-link">Home</NavLink>
-                    <NavLink to="/cv" className="nav-link">CV</NavLink>
-                    <NavLink to="/projets" className="nav-link">Projets</NavLink>
-                    <NavLink to="/contact" className="nav-link">Contact</NavLink>
+                    <NavLink to="/" className="nav-link" onClick={() => {setNavbarState(false)}}>Home</NavLink>
+                    <NavLink to="/cv" className="nav-link" onClick={() => {setNavbarState(false)}}>CV</NavLink>
+                    {/* <NavLink to="/projets" className="nav-link" onClick={() => {setNavbarState(false)}}>Projets</NavLink> */}
+                    <NavLink to="/contact" className="nav-link" onClick={() => {setNavbarState(false)}}>Contact</NavLink>
                 </ul>
             </nav>
         )
