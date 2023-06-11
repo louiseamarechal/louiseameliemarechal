@@ -148,7 +148,7 @@
 
 @media (min-width: 100px) and (max-width: 768px) {
 
-    .header-cv button, #experience li, #experience p {
+    .header-cv button, #experience li, #experience p, #competences {
         font-size: 10px;
     }
     
