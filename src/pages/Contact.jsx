@@ -57,7 +57,7 @@ const Contact = () => {
                         />
                 </div>
                 <Link to='/success'>
-                    <button className='see-through-button'>
+                    <button className='form-submit see-through-button'>
                         <input type="submit" value="Send" />
                     </button>
                 </Link>
