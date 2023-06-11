@@ -83,7 +83,7 @@
     color: var(--black);
 }
 
-#experience li, p {
+#experience li, #experience p {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
@@ -148,7 +148,7 @@
 
 @media (min-width: 100px) and (max-width: 768px) {
 
-    .header-cv button, #experience li, #experience p, #soft-skills {
+    .header-cv button, #experience li, #experience p {
         font-size: 10px;
     }
     
@@ -197,8 +197,8 @@
     }
     #soft-skills .skill {
         margin: 20px 0px !important;
-        height: 85px !important;
-        width: 85px !important;
-        font-size: 9px;
+        height: 100px !important;
+        width: 100px !important;
+        font-size: 9px !important;
     }
 }
