@@ -37,3 +37,11 @@
 .contact-form input, textarea {
     border-radius: 10px;
 }
+
+@media (min-width: 100px) and (max-width: 768px) {
+    
+    .contact-form {
+        height: 60%;
+        width: 80%;
+    }
+}

@@ -18,10 +18,10 @@ const CV = () => {
             // console.log(scroll)
             if (window.scrollY <= 100)
                 setScroll(50);
-            else if (window.scrollY >= 650 && window.scrollY < 1700)
-                setScroll(650);
-            else if (window.scrollY >= 1700 && window.scrollY < 2300)
-                setScroll(1700);
+            else if (window.scrollY >= 600 && window.scrollY < 1660)
+                setScroll(600);
+            else if (window.scrollY >= 1660 && window.scrollY < 2250)
+                setScroll(1660);
             else if (window.scrollY >= 2300)
                 setScroll(2300);
      });
@@ -54,10 +54,10 @@ const CV = () => {
                         <button className={scroll === 50 ? 'active-header' : 'none'}>Formation</button>
                     </ScrollIntoView>
                     <ScrollIntoView selector='#experience'>
-                        <button className={scroll === 650 ? 'active-header' : 'none'}>Experience</button>
+                        <button className={scroll === 600 ? 'active-header' : 'none'}>Experience</button>
                     </ScrollIntoView>
                     <ScrollIntoView selector='#competences'>
-                        <button className={scroll === 1700 ? 'active-header' : 'none'}>Compétences</button>
+                        <button className={scroll === 1660 ? 'active-header' : 'none'}>Compétences</button>
                     </ScrollIntoView>
                     <ScrollIntoView selector='#soft-skills'>
                         <button className={scroll === 2300 ? 'active-header' : 'none'}>Soft Skills</button>

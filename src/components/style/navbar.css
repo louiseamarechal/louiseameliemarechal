@@ -11,8 +11,8 @@
 }
 
 .navbar-links {
-    margin-top: 10vh;
-    min-height: 90vh;
+    /* margin-top: 10vh; */
+    min-height: 100vh;
     display: flex;
     margin-left: 25%;
     flex-direction: column;
@@ -65,15 +65,16 @@
     .navbar {
         width: 100%;
         min-height: 100vh;
-        font-size: 15px;
     }
 
     .closed-navbar button {
         height: 10vh;
+        width: 20%;
     }
 
     .navbar button {
         height: 10vh;
+        width: 20%;
     }
 }
 
@@ -86,9 +87,4 @@
     .navbar button {
         height: 10vh;
     }
-
-    /* .navbar {
-        width: 30%;
-        min-height: 100vh;
-    } */
 }
