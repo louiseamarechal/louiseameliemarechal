@@ -1,6 +1,12 @@
-/* body {
-  margin: 0px;
-} */
+
+
+/************** GAME TEST ************************/
+
+#canvas {
+  background-color: #134959;
+}
+
+/*************************************************/
 
 .app {
   background: linear-gradient(0deg, rgba(232, 226, 218, 0.45), rgba(232, 226, 218, 0.45)), radial-gradient(45% 32.81% at 67.6% 41.31%, #EC8FBE 0.01%, #EC8FBE 0.02%, rgba(236, 143, 190, 0) 100%);
