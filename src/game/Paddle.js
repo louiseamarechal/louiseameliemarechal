@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default (ctx, canvas, paddleProps) => {
     class Paddle {
         constructor(x) {
@@ -5,16 +6,14 @@ export default (ctx, canvas, paddleProps) => {
             this.y = canvas.height - 30;
             this.height = 20;
             this.width = paddleProps.width;
-            this.colors = ["red", "#FFA62B"];
+            this.colors = "lightblue";
         }        
         move() {
             ctx.beginPath();
             ctx.rect(this.x, this.y, this.width, this.height);
-            ctx.fillStyle = this.broke ? "white" : this.colors[1];
-            ctx.strokeStyle = this.broke ? "withe" : "red";
+            ctx.fillStyle = this.colors;
+            ctx.strokeStyle = this.colors;
             ctx.lineWidth = 1;
-            ctx.fillStyle = this.broke ? "white" : this.colors[1];
-            ctx.shadowColor = "blue";
             ctx.strokeRect(this.x, this.y, this.width, this.height);
             ctx.fill();
         }

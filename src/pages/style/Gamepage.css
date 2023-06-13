@@ -1,0 +1,13 @@
+.game-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+#canvas {
+    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.08));
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    background-color: #FFA62B;
+}

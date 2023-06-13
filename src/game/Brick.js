@@ -1,7 +1,7 @@
 export default function Brick(level, bricks, canvas, brick) {
 
     // level defines the number of lines of brick we want
-    brick.width = canvas.width / 5;
+    brick.width = canvas.width / 5 - 1;
     let newbricks = [];
     if (!bricks) {
         return [];
@@ -18,7 +18,7 @@ export default function Brick(level, bricks, canvas, brick) {
             brick.y,
             brick.width,
             brick.height,
-            brick.colors,
+            brick.color,
         );
         newbricks.push(newBrick);
 
@@ -28,7 +28,6 @@ export default function Brick(level, bricks, canvas, brick) {
             brick.y += brick.height + 1;
         }
     }
-    console.log(newbricks);
     return newbricks;
 }
 
@@ -38,17 +37,16 @@ class SingleBrick {
         this.y = y;
         this.width = w;
         this.height = h;
-        this.colors = c;
+        this.color = c;
         this.broke = false;
     }
     // to display the brick on the screen
     draw(ctx) {
         ctx.beginPath();
         ctx.rect(this.x, this.y, this.width, this.height);
-        ctx.fillStyle = this.broke ? '#134959' : this.colors[1];
-        ctx.strokeStyle = this.broke ? '#134959' : '#134959';
+        ctx.fillStyle = this.broke ? '#FFA62B' : this.color;
+        ctx.strokeStyle = '#FFA62B';
         ctx.lineWidth = 5;
-        ctx.fillStyle = this.broke ? '#134959' : this.colors[1];
         ctx.shadowBlur = 0;
         ctx.shadowColor = "blue";
         ctx.strokeRect(this.x, this.y, this.width, this.height);

@@ -8,7 +8,7 @@ import './components/style/colors.css'
 import Footer from './components/footer.jsx'
 import Navbar from './components/navbar.jsx'
 import Success from './pages/Success'
-import Board from './game/Board'
+import Game from './pages/Gamepage'
 // import Reveal from './components/reveal.jsx'
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
             <Route path="/projets" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/success" element={<Success />} />
-            <Route path="/game" element={<Board />} />
+            <Route path="/game" element={<Game />} />
         </Routes>
       </div>
       <Footer/>

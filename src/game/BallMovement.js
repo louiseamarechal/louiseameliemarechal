@@ -16,8 +16,8 @@ class Ball {
         ctx.beginPath();
         ctx.fillStyle = "red";
         ctx.arc(this.x, this.y, this.rad, 0, 2 * Math.PI);
-        ctx.strokeStyle = "black";
-        ctx.strokWidth = 4;
+        ctx.strokeStyle = "red";
+        // ctx.strokeWidth = 0.5;
         ctx.fill();
         ctx.stroke();
     }

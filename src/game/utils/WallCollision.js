@@ -3,8 +3,8 @@ export default function WallCollision (ballObj, canvas, player, paddleProps) {
     // if we hit bottom wall
     if (ballObj.y + ballObj.rad >= canvas.height) {
         player.lives--;
-        // ballObj.x = paddleProps.x;
-        // ballObj.y = paddleProps.y - 30;
+        ballObj.x = paddleProps.x;
+        ballObj.y = paddleProps.y - 30;
         ballObj.dx = 6 * (Math.random() * 2 - 1);
         ballObj.dy = -6;
     }
