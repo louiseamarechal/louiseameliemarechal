@@ -45,8 +45,9 @@ class SingleBrick {
         ctx.beginPath();
         ctx.rect(this.x, this.y, this.width, this.height);
         ctx.fillStyle = '#0B00D4';
-        ctx.fillStyle = this.broke ? 'black' : "0B00D4";
-        ctx.strokeStyle = this.broke ? 'black' : '#39FF14';
+        ctx.fillStyle = this.broke ? 'black' : "#0B00D4";
+        ctx.strokeStyle = this.broke ? 'black' : "#0B00D4";
+        // ctx.strokeStyle = this.broke ? 'black' : '#39FF14';
         ctx.lineWidth = 5;
         ctx.shadowBlur = 0;
         ctx.shadowColor = "blue";

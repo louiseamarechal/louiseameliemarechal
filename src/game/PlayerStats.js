@@ -7,7 +7,7 @@ export default function PlayerStats(ctx, player, canvas) {
   
     // Lives
     ctx.font = "20px Arial";
-    ctx.fillStyle = "#0B00D4";
+    ctx.fillStyle = "white";
     let gap = 0;
     for (let i = 0; i < player.lives; i++) {
       ctx.fillText("❤️", canvas.width / 2 + gap, 30);
@@ -16,7 +16,7 @@ export default function PlayerStats(ctx, player, canvas) {
   
     // Score
     ctx.font = "20px Arial";
-    ctx.fillStyle = "#0B00D4";
+    ctx.fillStyle = "white";
     ctx.fillText(`Score: ${player.score}`, canvas.width - 140, 30);
     
     // Level

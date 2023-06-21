@@ -20,6 +20,7 @@ export default function Navbar() {
                     <NavLink to="/" className="nav-link" onClick={() => {setNavbarState(false)}}>Home</NavLink>
                     <NavLink to="/cv" className="nav-link" onClick={() => {setNavbarState(false)}}>CV</NavLink>
                     {/* <NavLink to="/projets" className="nav-link" onClick={() => {setNavbarState(false)}}>Projets</NavLink> */}
+                    <NavLink to="/game" className="nav-link" onClick={() => {setNavbarState(false)}}>Game</NavLink>
                     <NavLink to="/contact" className="nav-link" onClick={() => {setNavbarState(false)}}>Contact</NavLink>
                 </ul>
             </nav>
