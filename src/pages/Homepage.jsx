@@ -9,6 +9,7 @@ const Homepage = () => {
 
     const { navbarState } = useNavbar();
 
+    // window.onload = function () {
     return (
         <Reveal>
             <div className={'homepage '  + (navbarState ? 'opened-nav-margin' : 'w-full')}>
@@ -24,6 +25,7 @@ const Homepage = () => {
             </div>
         </Reveal>
     )
+    // }
 }
 
 export default Homepage;

@@ -1,5 +1,5 @@
 import './App.css'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Homepage from './pages/Homepage.jsx'
 import CV from './pages/CV.jsx'
 import Projects from './pages/Projects.jsx'
@@ -13,6 +13,8 @@ import Game from './pages/Gamepage'
 
 const App = () => {
   
+  const location = useLocation();
+
   return (
     <div className='app'>
       <Navbar/>
@@ -26,7 +28,7 @@ const App = () => {
             <Route path="/game" element={<Game />} />
         </Routes>
       </div>
-      <Footer/>
+      {location.pathname === '/game' ? (<></>) : (<Footer/>)}
     </div>
   )
 }

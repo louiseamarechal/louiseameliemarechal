@@ -13,12 +13,18 @@ class Ball {
     }
 
     draw(ctx) {
+        // ctx.beginPath();
+        // ctx.fillStyle = "red";
+        // ctx.arc(this.x, this.y, this.rad, 0, 2 * Math.PI);
+        // ctx.strokeStyle = "red";
+        // // ctx.strokeWidth = 0.5;
+        // ctx.fill();
+        // ctx.stroke();
         ctx.beginPath();
-        ctx.fillStyle = "red";
+        ctx.fillStyle = '#39FF14'; //0B00D4
         ctx.arc(this.x, this.y, this.rad, 0, 2 * Math.PI);
-        ctx.strokeStyle = "red";
-        // ctx.strokeWidth = 0.5;
+        // ctx.strokeStyle = '#39FF14';
         ctx.fill();
-        ctx.stroke();
+        // ctx.stroke();
     }
 }

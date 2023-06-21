@@ -2,12 +2,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 90vh;
+    min-height: 100vh;
+    background-color: black;
 }
 
 #canvas {
     filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.08));
+    background-color: black;
+    border: solid 1px #39FF14;
     border-radius: 10px;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
-    background-color: #FFA62B;
-}
+    position: relative;
+  }
+  

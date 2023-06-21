@@ -1,13 +1,16 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import './style/navbar.css'
 // import { useState } from 'react';
 import useNavbar from '../hooks/useNavbar';
 
 export default function Navbar() {
     
+    const location = useLocation();
     const { navbarState, setNavbarState } = useNavbar();
     // const [navbarState, setNavbarState] = useState(false);
     
+    if (location.pathname === '/game')
+        return;
     if (navbarState)
         return (
             <nav className='navbar'>

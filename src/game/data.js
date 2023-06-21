@@ -13,7 +13,7 @@ export default {
       y: 50,
       height: 20,
       density: 2,
-      color: "lightblue",
+      color: "#39FF14",
     },
     player: {
       name: "LouiseA",
@@ -23,8 +23,9 @@ export default {
     },
     paddleProps: {
       height: 20,
-      width: 100,
-      x: 100,
+      width: 150,
+      x: -100,
+      y:0,
       // color: "orange",
     },
   };

@@ -1,9 +1,15 @@
+import { useLocation } from 'react-router-dom';
 import useNavbar from '../hooks/useNavbar';
 import './style/footer.css'
 
 const Footer = () => {
 
     const { navbarState } = useNavbar();
+    const location = useLocation();
+
+    if (location.pathname === '/playgame') {
+        return;
+    }
 
     return (
         <div className={"footer " + (navbarState ? 'opened-nav-margin' : 'w-full')}>
