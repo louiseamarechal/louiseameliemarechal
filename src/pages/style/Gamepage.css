@@ -4,6 +4,19 @@
     justify-content: center;
     min-height: 100vh;
     background-color: black;
+    position: relative;
+}
+
+.player-stats {
+    height: 85vh;
+    position: absolute;
+    color: white;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    width: 75%;
 }
 
 #canvas {

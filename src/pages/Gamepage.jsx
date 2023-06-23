@@ -11,7 +11,7 @@ import PlayerStats from "../game/PlayerStats";
 import ResetBallData from "../game/utils/ResetBallData";
 import AllBroken from "../game/utils/AllBroken";
 import ResetPlayerData from "../game/utils/ResetPlayerData";
-import './style/Gamepage.css'
+import "./style/Gamepage.css";
 
 let bricks = [];
 
@@ -23,10 +23,8 @@ export default function Game() {
     const render = () => {
       const canvas = canvasRef.current;
 
-      if (canvas !== null)
-      {
-
-          const context = canvas.getContext("2d");
+      if (canvas !== null) {
+        const context = canvas.getContext("2d");
 
         // we don't have a y in the paddleProps data
         paddleProps.y = canvas.height - 30;
@@ -42,30 +40,29 @@ export default function Game() {
         context.clearRect(0, 0, canvas.width, canvas.height);
 
         PlayerStats(context, player, canvas);
-
         // Display the bricks
         bricks.map((brick) => {
           return brick.draw(context);
         });
-
+        
         BallMovement(context, ballObj);
-
+        
         AllBroken(bricks, player, ballObj);
-
+        
         if (player.lives === 0) {
           alert("Game Over! Press ok to restart");
           ResetPlayerData(player);
           ResetBallData(ballObj, paddleProps);
           bricks.length = 0; // reinitialise l'[]
         }
-
+        
         WallCollision(ballObj, canvas, player, paddleProps);
-
+        
         let brickCollision;
-
+        
         for (let i = 0; i < bricks.length; i++) {
           brickCollision = BrickCollision(ballObj, bricks[i]);
-
+          
           // if we hit the brick and it is not broke we change the direction of the ball and the remove the brock (broke = true)
           if (brickCollision.hit && !bricks[i].broke) {
             // console.log(brickCollision);
@@ -80,23 +77,28 @@ export default function Game() {
           }
         }
         Paddle(context, canvas, paddleProps);
-
+        
         // Padlle and ball collision
         PaddleHit(ballObj, paddleProps);
-
+        
         // console.log("RequestAnimationFrame(render)");
         requestAnimationFrame(render); // it's calling the fct multiple times (see the console)
-      };
       }
-
+    };
+    
     render();
-
   });
-
+  
   return (
     <>
-      <Link to="/"><button className='home-logo fa-solid fa-house' style={{color: 'white'}}></button></Link>
+      <Link to="/">
+        <button
+          className="home-logo fa-solid fa-house"
+          style={{ color: "white" }}
+        ></button>
+      </Link>
       <div className="game-page">
+        {/* <PlayerStats player={player}/> */}
         <canvas
           id="canvas"
           ref={canvasRef}
@@ -106,13 +108,13 @@ export default function Game() {
           } // adding the paddle width / 2 allow us to have the cursor in the middle of the paddle
           height={
             window.innerHeight < 900
-            ? window.innerHeight - 80
-            : window.innerHeight - (window.innerHeight * 20) / 100
+              ? window.innerHeight - 180
+              : window.innerHeight - (window.innerHeight * 20) / 100
           }
           width={
             window.innerWidth < 900
-            ? window.innerWidth - 20
-            : window.innerWidth - (window.innerWidth * 20) / 100
+              ? window.innerWidth - 20
+              : window.innerWidth - (window.innerWidth * 20) / 100
           }
         />
       </div>
