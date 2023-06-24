@@ -1,34 +1,33 @@
 const SoftSkills = (props) => {
+  const { skillName } = props;
 
-    const { skillName } = props;
+  const circleStyle = {
+    height: 150,
+    width: 150,
+    borderRadius: 100,
+    backgroundColor: "var(--pale-pink)",
+    margin: "0px 20px",
+    boxShadow: "0px 1px 3px var(--grey)",
+  };
 
-    const circleStyle = {
-        height: 150,
-        width: 150,
-        borderRadius: 100,
-        backgroundColor: "var(--pale-pink)",
-        margin: '0px 20px',
-        boxShadow: '0px 1px 3px var(--grey)'
-    }
+  const textStyle = {
+    color: "var(--beige)",
+    height: "inherit",
+    width: "90%",
+    paddingLeft: "10%",
+    textAlign: "center",
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: "center",
+    letterSpacing: "0.15em",
+  };
 
-    const textStyle = {
-        color: "var(--beige)",
-        height: 'inherit',
-        width: '90%',
-        paddingLeft: '10%',
-        textAlign: 'center',
-        display: 'flex',
-        flexWrap: 'wrap',
-        alignItems: 'center',
-        justifyContent: 'center',
-        letterSpacing: '0.15em'
-    }
+  return (
+    <div className="skill" style={circleStyle}>
+      <p style={textStyle}>{`${skillName}`}</p>
+    </div>
+  );
+};
 
-    return (
-        <div className="skill" style={circleStyle}>
-            <p style={textStyle}>{`${skillName}`}</p>
-        </div>
-    )   
-}
-
-export default SoftSkills
+export default SoftSkills;

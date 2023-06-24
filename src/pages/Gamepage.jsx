@@ -44,25 +44,25 @@ export default function Game() {
         bricks.map((brick) => {
           return brick.draw(context);
         });
-        
+
         BallMovement(context, ballObj);
-        
+
         AllBroken(bricks, player, ballObj);
-        
+
         if (player.lives === 0) {
           alert("Game Over! Press ok to restart");
           ResetPlayerData(player);
           ResetBallData(ballObj, paddleProps);
           bricks.length = 0; // reinitialise l'[]
         }
-        
+
         WallCollision(ballObj, canvas, player, paddleProps);
-        
+
         let brickCollision;
-        
+
         for (let i = 0; i < bricks.length; i++) {
           brickCollision = BrickCollision(ballObj, bricks[i]);
-          
+
           // if we hit the brick and it is not broke we change the direction of the ball and the remove the brock (broke = true)
           if (brickCollision.hit && !bricks[i].broke) {
             // console.log(brickCollision);
@@ -77,18 +77,18 @@ export default function Game() {
           }
         }
         Paddle(context, canvas, paddleProps);
-        
+
         // Padlle and ball collision
         PaddleHit(ballObj, paddleProps);
-        
+
         // console.log("RequestAnimationFrame(render)");
         requestAnimationFrame(render); // it's calling the fct multiple times (see the console)
       }
     };
-    
+
     render();
   });
-  
+
   return (
     <>
       <Link to="/">
