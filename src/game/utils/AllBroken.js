@@ -10,8 +10,6 @@ export default function AllBroken(bricks, player, ballObj) {
     }
   }
 
-  console.log({ brokenBricks });
-  console.log({ brickLenght: bricks.length });
   if (brokenBricks === bricks.length) {
     player.level++;
     ResetBallData(ballObj, paddleProps);
