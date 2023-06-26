@@ -20,10 +20,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/cv" element={<CV />} />
-          <Route path="/projets" element={<Projects />} />
+          {/* <Route path="/projets" element={<Projects />} /> */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/success" element={<Success />} />
-          <Route path="/game" element={<Game />} />
+          {/* <Route path="/game" element={<Game />} /> */}
         </Routes>
       </div>
       {location.pathname === "/game" ? <></> : <Footer />}
