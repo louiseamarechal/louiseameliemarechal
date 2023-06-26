@@ -2,13 +2,13 @@ import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Homepage from "./pages/Homepage.jsx";
 import CV from "./pages/CV.jsx";
-import Projects from "./pages/Projects.jsx";
+// import Projects from "./pages/Projects.jsx";
 import Contact from "./pages/Contact.jsx";
 import "./components/style/colors.css";
 import Footer from "./components/footer.jsx";
 import Navbar from "./components/navbar.jsx";
 import Success from "./pages/Success";
-import Game from "./pages/Gamepage";
+// import Game from "./pages/Gamepage";
 
 const App = () => {
   const location = useLocation();
