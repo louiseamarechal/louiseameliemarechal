@@ -1,2 +1,2 @@
 # My Personal Website
-Please visite : https://louiseameliemarechal.herokuapp.com/
+Please visit : https://louiseameliemarechal.herokuapp.com/
