@@ -40,7 +40,7 @@ const CV = () => {
   ];
 
   return (
-    <>
+    <div className="w-screen">
       <div
         className={
           "header-cv " + (navbarState ? "opened-nav-margin" : "w-full")
@@ -189,7 +189,7 @@ const CV = () => {
           </div>
         </Reveal>
       </div>
-    </>
+    </div>
   );
 };
 /* // <div className='container-cv'>

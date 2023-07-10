@@ -2,14 +2,12 @@ import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./style/Contact.css";
-import useNavbar from "../hooks/useNavbar";
 
 const Contact = () => {
   const form = useRef();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const { navbarState } = useNavbar();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -35,11 +33,7 @@ const Contact = () => {
   };
 
   return (
-    <div
-      className={
-        "contact-page " + (navbarState ? "opened-nav-margin" : "w-full")
-      }
-    >
+    <div className="contact-page">
       <form ref={form} onSubmit={sendEmail} className="contact-form">
         <div className="form-info">
           <label>Name</label>

@@ -8,15 +8,19 @@ import "./components/style/colors.css";
 import Footer from "./components/footer.jsx";
 import Navbar from "./components/navbar.jsx";
 import Success from "./pages/Success";
+import useNavbar from "./hooks/useNavbar";
+
 // import Game from "./pages/Gamepage";
 
 const App = () => {
   const location = useLocation();
+  const { navbarState } = useNavbar();
 
   return (
-    <div className="app">
+    <div className="app w-screen">
       <Navbar />
-      <div className="main-content">
+      <div className={"main-content " + (navbarState ? "opened-nav-margin" : "w-full")
+        }>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/cv" element={<CV />} />
