@@ -1,6 +1,8 @@
 import { NavLink, useLocation } from "react-router-dom";
 import "./style/navbar.css";
-// import { useState } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import useNavbar from "../hooks/useNavbar";
 
 export default function Navbar() {
@@ -12,13 +14,15 @@ export default function Navbar() {
   if (navbarState)
     return (
       <nav className="navbar">
-        <button
-          onClick={() => {
-            setNavbarState(false);
-          }}
-          className={"fa-solid fa-xmark fa-l"}
-          style={{ color: "var(--black)" }}
-        ></button>
+        <button>
+          <FontAwesomeIcon
+            icon={faXmark}
+            onClick={() => {
+              setNavbarState(false);
+            }}
+            style={{ color: "var(--black)" }}
+          />
+        </button>
         <ul className="navbar-links send-front">
           <NavLink
             to="/"
@@ -38,7 +42,15 @@ export default function Navbar() {
           >
             CV
           </NavLink>
-          <NavLink to="/projets" className="nav-link" onClick={() => {setNavbarState(false)}}>Projets</NavLink>
+          <NavLink
+            to="/projets"
+            className="nav-link"
+            onClick={() => {
+              setNavbarState(false);
+            }}
+          >
+            Projets
+          </NavLink>
           {/* <NavLink to="/game" className="nav-link" onClick={() => { setNavbarState(false); }} > Game</NavLink> */}
           <NavLink
             to="/contact"
@@ -56,12 +68,12 @@ export default function Navbar() {
     return (
       <div className="closed-navbar send-front">
         <button
-          onClick={() => {
-            setNavbarState(true);
-          }}
-          className={"fa-solid fa-bars closed-nav"}
-          style={{ color: "var(--black)" }}
-        ></button>
+        ><FontAwesomeIcon
+        icon={faBars}
+        onClick={() => {
+          setNavbarState(true);
+        }}
+        style={{ color: "var(--black)" }}/></button>
       </div>
     );
 }
