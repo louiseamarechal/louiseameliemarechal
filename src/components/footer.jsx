@@ -1,5 +1,8 @@
 import { useLocation } from "react-router-dom";
 import useNavbar from "../hooks/useNavbar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquareGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import "./style/footer.css";
 
 const Footer = () => {
@@ -13,16 +16,17 @@ const Footer = () => {
   return (
     <div className={"footer " + (navbarState ? "opened-nav-margin" : "w-full")}>
       <a href="https://www.linkedin.com/in/louise-amelie-mar%C3%A9chal-ba978298">
-        <i
-          className={"fa-brands fa-linkedin fa-xl"}
+        <FontAwesomeIcon
+          icon={faLinkedin}
           style={{ color: "var(--pink)" }}
-        ></i>
+          size="xl"
+        />
       </a>
       <a href="https://github.com/louiseamarechal">
-        <i
-          className={"fa-brands fa-square-github fa-xl"}
+      <FontAwesomeIcon icon={faSquareGithub}
+          size='xl'
           style={{ color: "var(--pink)" }}
-        ></i>
+        />
       </a>
     </div>
   );
