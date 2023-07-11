@@ -1,6 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./style/Contact.css";
 
 const Contact = () => {
@@ -8,9 +8,11 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
   const sendEmail = (e) => {
     e.preventDefault();
+
 
     emailjs
       .sendForm(
@@ -30,6 +32,7 @@ const Contact = () => {
     setName("");
     setEmail("");
     setMessage("");
+    navigate("/success");
   };
 
   return (
@@ -64,11 +67,9 @@ const Contact = () => {
             onChange={(e) => setMessage(e.target.value)}
           />
         </div>
-        <Link to="/success">
           <button className="form-submit see-through-button">
             <input type="submit" value="Send" />
           </button>
-        </Link>
       </form>
     </div>
   );
