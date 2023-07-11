@@ -21,15 +21,18 @@ const CV = () => {
   }, []);
 
   const skillsData = [
-    { completed: 70, skill: "C" },
-    { completed: 70, skill: "C++" },
-    { completed: 35, skill: "NestJS" },
-    { completed: 35, skill: "React" },
-    { completed: 35, skill: "NodeJs" },
-    { completed: 35, skill: "RoR" },
+    { completed: 50, skill: "TypeScript" },
+    { completed: 50, skill: "NestJS" },
+    { completed: 60, skill: "React" },
+    { completed: 40, skill: "JS" },
+    { completed: 40, skill: "NodeJs" },
     { completed: 60, skill: "Figma" },
+    { completed: 30, skill: "Prisma" },
+    { completed: 45, skill: "Axios" },
+    { completed: 70, skill: "C++" },
+    { completed: 70, skill: "C" },
+    { completed: 35, skill: "RoR" },
     { completed: 80, skill: "Anglais" },
-    { completed: 20, skill: "Mysql" },
   ];
 
   const softSkills = [
@@ -40,16 +43,12 @@ const CV = () => {
   ];
 
   return (
-    <div className="w-screen">
-      <div
-        className={
-          "header-cv " + (navbarState ? "opened-nav-margin" : "w-full")
-        }
-      >
-        <ul>
-          <ScrollIntoView selector="#formation">
+    <>
+      <div className={"header-cv " + (navbarState ? 'w-[85%]' : 'w-full')}>
+        <nav>
+          <ScrollIntoView selector="#competences">
             <button className={scroll === 50 ? "active-header" : "none"}>
-              Formation
+              Compétences
             </button>
           </ScrollIntoView>
           <ScrollIntoView selector="#experience">
@@ -57,9 +56,9 @@ const CV = () => {
               Experience
             </button>
           </ScrollIntoView>
-          <ScrollIntoView selector="#competences">
+          <ScrollIntoView selector="#formation">
             <button className={scroll === 1600 ? "active-header" : "none"}>
-              Compétences
+              Formation
             </button>
           </ScrollIntoView>
           <ScrollIntoView selector="#soft-skills">
@@ -67,12 +66,18 @@ const CV = () => {
               Soft Skills
             </button>
           </ScrollIntoView>
-        </ul>
+        </nav>
       </div>
       <div className={"cv " + (navbarState ? "opened-nav-margin" : "w-full")}>
-        <Reveal width={"100%"}>
-          <div id="formation">
-            <Timeline />
+        <Reveal>
+          <div id="competences">
+            {skillsData.map((item, index) => (
+              <ProgressBar
+                key={index}
+                completed={item.completed}
+                skill={item.skill}
+              />
+            ))}
           </div>
         </Reveal>
         <div id="experience">
@@ -170,15 +175,9 @@ const CV = () => {
             </div>
           </Reveal>
         </div>
-        <Reveal>
-          <div id="competences">
-            {skillsData.map((item, index) => (
-              <ProgressBar
-                key={index}
-                completed={item.completed}
-                skill={item.skill}
-              />
-            ))}
+        <Reveal width={"100%"}>
+          <div id="formation">
+            <Timeline />
           </div>
         </Reveal>
         <Reveal>
@@ -189,7 +188,7 @@ const CV = () => {
           </div>
         </Reveal>
       </div>
-    </div>
+    </>
   );
 };
 /* // <div className='container-cv'>

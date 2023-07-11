@@ -38,7 +38,7 @@ export default function Navbar() {
           >
             CV
           </NavLink>
-          {/* <NavLink to="/projets" className="nav-link" onClick={() => {setNavbarState(false)}}>Projets</NavLink> */}
+          <NavLink to="/projets" className="nav-link" onClick={() => {setNavbarState(false)}}>Projets</NavLink>
           {/* <NavLink to="/game" className="nav-link" onClick={() => { setNavbarState(false); }} > Game</NavLink> */}
           <NavLink
             to="/contact"

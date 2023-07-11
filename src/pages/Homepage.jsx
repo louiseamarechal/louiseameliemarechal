@@ -17,7 +17,7 @@ const Homepage = () => {
             Curriculum Vitae
           </Link>
           {/* <Link to="/game" className="see-through-button m-5"> Play Game </Link> */}
-          {/* <Link to="/projets" className='see-through-button m-5'>Projets</Link> */}
+          <Link to="/projets" className='see-through-button m-5'>Projets</Link>
           <Link to="/contact" className="see-through-button">
             Contact
           </Link>
